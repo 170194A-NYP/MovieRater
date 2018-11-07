@@ -26,7 +26,7 @@
               android:text="@string/tvLanguage"/>
 
     <RadioGroup android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal" android:id="@+id/rgLanguage">
         <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content"
                      android:text="@string/rbtnEnglish"/>
         <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content"
@@ -39,14 +39,17 @@
 
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/tvReleaseDate"/>
 
-    <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/etReleaseDate"/>
+    <EditText android:layout_width="match_parent" android:layout_height="wrap_content" android:hint="@string/etReleaseDate" android:id="@+id/etReleaseDate"/>
 
-    <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/chkbxNotSuitable" android:onClick="showTextBox" android:id="@+id/chkbxSuitable"/>
+    <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/chkbxNotSuitable" android:id="@+id/chkbxSuitable"/>
 
     <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:weightSum="1" android:visibility="invisible" android:id="@+id/llotherBoxes">
-        <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/chkbxViolence" android:layout_weight="0.5"/>
-        <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="0.5" android:text="@string/chkbxLanguageUsed"/>
+        <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/chkbxViolence" android:layout_weight="0.5" android:id="@+id/chkbxLanguage_Used"/>
+        <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="0.5" android:text="@string/chkbxLanguageUsed" android:id="@+id/chkbxViolence_Used"/>
     </LinearLayout>
 
-    <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btnAddMovie" android:onClick="validateForm"/>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btnAddMovie" android:onClick="validateForm" android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
 </LinearLayout>

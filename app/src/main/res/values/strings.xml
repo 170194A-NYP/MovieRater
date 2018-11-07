@@ -1,16 +1,16 @@
 <resources>
     <string name="app_name">MovieRater</string>
     <string name="tvName">Name</string>
-    <string name="etMovieName">Enter movie name</string>
+    <string name="etMovieName">Enter the title of movie</string>
     <string name="tvDescription">Description</string>
-    <string name="etDescription">Enter Description</string>
+    <string name="etDescription">Enter a short description of the movie</string>
     <string name="tvLanguage">Language</string>
     <string name="rbtnEnglish">English</string>
     <string name="rbtnChinese">Chinese</string>
     <string name="rbtnMalay">Malay</string>
     <string name="rbtnTamil">Tamil</string>
     <string name="tvReleaseDate">Release Date</string>
-    <string name="etReleaseDate">Enter Release Date</string>
+    <string name="etReleaseDate">Enter release date</string>
     <string name="chkbxNotSuitable">Not suitable for all audience</string>
     <string name="chkbxViolence">Violence</string>
     <string name="chkbxLanguageUsed">Language used</string>
