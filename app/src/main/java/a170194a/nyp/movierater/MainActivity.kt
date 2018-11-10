@@ -1,10 +1,12 @@
 package a170194a.nyp.movierater
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
+import java.io.Serializable
 
 class MainActivity : AppCompatActivity() {
 
@@ -62,6 +64,10 @@ class MainActivity : AppCompatActivity() {
                     "Language : " + language_used + "\n" +
                     "Violence : " + violence
             Toast.makeText(applicationContext, text, duration).show()
+            var movie = MovieEntity(etMovieName.text.toString(),etMovieDescription.text.toString(),language,etReleaseDate.text.toString(), !chkbxSuitable.isChecked())
+            var Intent = Intent(this, view_movie_activity::class.java)
+            Intent.putExtra("Movie", movie as Serializable)
+            startActivity(Intent)
         }
     }
 

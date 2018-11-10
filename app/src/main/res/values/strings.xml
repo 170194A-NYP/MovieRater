@@ -15,4 +15,12 @@
     <string name="chkbxViolence">Violence</string>
     <string name="chkbxLanguageUsed">Language used</string>
     <string name="btnAddMovie">Add Movie</string>
+    <string name="viewMovie_title">Title:</string>
+    <string name="viewMovie_overview">Overview:</string>
+    <string name="viewMovie_language">Language:</string>
+    <string name="viewMovie_releasedate">Release date:</string>
+    <string name="viewMovie_suitable">Suitable for children below 13:</string>
+    <string name="rateMovie_enterreview">Enter your review for the movie :</string>
+    <string name="rateMovie_shareview">Share your view on the show</string>
+    <string name="title_activity_rate_movie_activity">rate_movie_activity</string>
 </resources>
