@@ -15,7 +15,13 @@ class view_movie_activity : AppCompatActivity() {
         viewMovie_overview.text = movie.overview
         viewMovie_language.text = movie.language
         viewMovie_releaseDate.text = movie.release_date
-        viewMovie_suitable.text = movie.suitability.toString()
+        var suitability = ""
+        if (movie.suitability == true) {
+            suitability = "No"
+        } else {
+            suitability = "Yes"
+        }
+        viewMovie_suitable.text = suitability
     }
 
 

@@ -4,8 +4,11 @@ import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.RadioButton
+import android.widget.RadioGroup
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main.view.*
 import java.io.Serializable
 
 class MainActivity : AppCompatActivity() {
@@ -39,13 +42,7 @@ class MainActivity : AppCompatActivity() {
         } else {
             var language_used = ""
             var violence = ""
-            var language = when (rgLanguage.checkedRadioButtonId) {
-                1 -> "English"
-                2 -> "Chinese"
-                3 -> "Malay"
-                4 -> "Tamil"
-                else -> ""
-            }
+            var selected: RadioButton = findViewById(rgLanguage.checkedRadioButtonId)
             if (chkbxSuitable.isChecked) {
                 if (chkbxLanguage_Used.isChecked) {
                     language_used = "true"
@@ -58,13 +55,13 @@ class MainActivity : AppCompatActivity() {
             var text = "Title = " + etMovieName.text.toString() + "\n" +
                     "Overview = " + etMovieDescription.text.toString() + "\n" +
                     "Release date = " + etReleaseDate.text.toString() + "\n" +
-                    "Language = " + language + "\n" +
+                    "Language = " + selected.text + "\n" +
                     "Suitable for all ages = " + chkbxSuitable.isChecked() + "\n" +
                     "Reason : " + "\n" +
                     "Language : " + language_used + "\n" +
                     "Violence : " + violence
             Toast.makeText(applicationContext, text, duration).show()
-            var movie = MovieEntity(etMovieName.text.toString(),etMovieDescription.text.toString(),language,etReleaseDate.text.toString(), !chkbxSuitable.isChecked())
+            var movie = MovieEntity(etMovieName.text.toString(),etMovieDescription.text.toString(),selected.text.toString(),etReleaseDate.text.toString(), !chkbxSuitable.isChecked())
             var Intent = Intent(this, view_movie_activity::class.java)
             Intent.putExtra("Movie", movie as Serializable)
             startActivity(Intent)
