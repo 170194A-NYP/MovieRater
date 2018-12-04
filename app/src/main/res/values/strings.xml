@@ -23,4 +23,10 @@
     <string name="rateMovie_enterreview">Enter your review for the movie :</string>
     <string name="rateMovie_shareview">Share your view on the show</string>
     <string name="title_activity_rate_movie_activity">rate_movie_activity</string>
+    <string name="landing_page_no_movie">You have not added a movie \nLong Press me to add a movie</string>
+    <string name="viewMovie_reviewtitle">Reviews :</string>
+    <string name="viewMovie_review">No Reviews yet. \nLong press here to add your review.</string>
+    <string name="rateMovie_submit">Submit</string>
+    <string name="mainActivity_Add">Add</string>
+    <string name="mainActivity_Clear">Clear Entries</string>
 </resources>

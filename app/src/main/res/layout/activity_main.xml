@@ -26,9 +26,9 @@
               android:text="@string/tvLanguage"/>
 
     <RadioGroup android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:orientation="horizontal" android:id="@+id/rgLanguage">
+                android:orientation="horizontal" android:id="@+id/rgLanguage" android:checkedButton="@id/rbEnglish">
         <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content"
-                     android:text="@string/rbtnEnglish"/>
+                     android:text="@string/rbtnEnglish" android:id="@+id/rbEnglish"/>
         <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content"
                      android:text="@string/rbtnChinese"/>
         <RadioButton android:layout_width="wrap_content" android:layout_height="wrap_content"
@@ -47,9 +47,5 @@
         <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/chkbxViolence" android:layout_weight="0.5" android:id="@+id/chkbxLanguage_Used"/>
         <CheckBox android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="0.5" android:text="@string/chkbxLanguageUsed" android:id="@+id/chkbxViolence_Used"/>
     </LinearLayout>
-
-    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
-        <Button android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/btnAddMovie" android:onClick="validateForm" android:layout_centerInParent="true"/>
-    </RelativeLayout>
 
 </LinearLayout>
