@@ -32,4 +32,5 @@ class rate_movie_activity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+
 }

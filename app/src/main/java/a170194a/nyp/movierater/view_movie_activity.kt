@@ -16,26 +16,30 @@ class view_movie_activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.view_movie)
 
-        var movie = intent.extras.get("Movie") as MovieEntity
+        try {
 
-        viewMovie_title.text = movie.movietitle
-        viewMovie_overview.text = movie.overview
-        viewMovie_language.text = movie.language
-        viewMovie_releaseDate.text = movie.release_date
-        var suitability = ""
-        if (movie.suitability == true) {
-            suitability = "No"
-        } else {
-            suitability = "Yes"
+            var movie = intent.extras.get("Movie") as MovieEntity
+
+            viewMovie_title.text = movie.movietitle
+            viewMovie_overview.text = movie.overview
+            viewMovie_language.text = movie.language
+            viewMovie_releaseDate.text = movie.release_date
+            var suitability = ""
+            if (movie.suitability == true) {
+                suitability = "No"
+            } else {
+                suitability = "Yes"
+            }
+            viewMovie_suitable.text = suitability
+
+            if (movie.review != null) {
+                rbviewMovie_RB.setVisibility(View.VISIBLE)
+                rbviewMovie_RB.setRating(movie.review.toString().toFloat())
+                viewMovie_reviews.text = movie.review_reason
+            }
+        } catch (e: Exception) {
+
         }
-        viewMovie_suitable.text = suitability
-
-        if (movie.review != null) {
-            rbviewMovie_RB.setVisibility(View.VISIBLE)
-            rbviewMovie_RB.setRating(movie.review.toString().toFloat())
-            viewMovie_reviews.text = movie.review_reason
-        }
-
         registerForContextMenu(viewMovie_reviews)
     }
 

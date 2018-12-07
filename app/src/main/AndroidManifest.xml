@@ -21,7 +21,8 @@
                 android:parentActivityName=".view_movie_activity">
         </activity>
         <activity android:name=".view_movie_activity"
-                  android:parentActivityName=".MainActivity">
+                  android:parentActivityName=".MainActivity"
+                  android:launchMode="singleTop">
         </activity>
         <activity android:name=".MainActivity">
         </activity>

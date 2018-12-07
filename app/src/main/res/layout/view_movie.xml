@@ -16,7 +16,7 @@
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
               android:text="@string/viewMovie_reviewtitle"/>
     <RatingBar android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/rbviewMovie_RB"
-               android:visibility="gone"/>
+               android:visibility="gone" android:isIndicator="true"/>
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
               android:text="@string/viewMovie_review" android:id="@+id/viewMovie_reviews"/>
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"

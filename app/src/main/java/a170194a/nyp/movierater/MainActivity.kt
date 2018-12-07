@@ -79,6 +79,7 @@ class MainActivity : AppCompatActivity() {
             etMovieName.text.clear()
             etMovieDescription.text.clear()
             rgLanguage.clearCheck()
+            rbEnglish.toggle()
             etReleaseDate.text.clear()
             if (chkbxSuitable.isChecked) {
                 chkbxSuitable.toggle()
