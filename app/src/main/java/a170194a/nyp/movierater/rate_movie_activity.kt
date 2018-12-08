@@ -23,12 +23,13 @@ class rate_movie_activity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         if (item?.itemId == R.id.miSubmit) {
-            var movie = intent.extras.get("Movie") as MovieEntity
-            movie.review = rbRating.getRating()
-            movie.review_reason = etShareView.text.toString()
-            var Intent = Intent(this, view_movie_activity::class.java)
-            Intent.putExtra("Movie", movie as Serializable)
-            startActivity(Intent)
+            var id = intent.extras.getInt("id")
+            Movies.myMovieEntities[id].review = rbRating.getRating()
+            Movies.myMovieEntities[id].review_reason = etShareView.text.toString()
+//            var Intent = Intent(this, view_movie_activity::class.java)
+//            Intent.putExtra("id", id)
+//            startActivity(Intent)
+            finish()
         }
         return super.onOptionsItemSelected(item)
     }

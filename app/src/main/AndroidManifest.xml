@@ -20,11 +20,16 @@
                 android:name=".rate_movie_activity"
                 android:parentActivityName=".view_movie_activity">
         </activity>
-        <activity android:name=".view_movie_activity"
-                  android:parentActivityName=".MainActivity"
-                  android:launchMode="singleTop">
+        <activity
+                android:name=".view_movie_activity"
+                android:launchMode="singleTop"
+                android:parentActivityName=".MainActivity">
         </activity>
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+                  android:parentActivityName=".Landing_page_activity">
+        </activity>
+        <activity android:name=".Edit_page_activity"
+        android:parentActivityName=".Landing_page_activity">
         </activity>
     </application>
 

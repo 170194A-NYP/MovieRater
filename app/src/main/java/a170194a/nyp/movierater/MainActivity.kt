@@ -71,9 +71,11 @@ class MainActivity : AppCompatActivity() {
                         "Violence : " + violence
                 Toast.makeText(applicationContext, text, duration).show()
                 var movie = MovieEntity(etMovieName.text.toString(),etMovieDescription.text.toString(),selected.text.toString(),etReleaseDate.text.toString(), !chkbxSuitable.isChecked(), chkbxViolence_Used.isChecked(), chkbxLanguage_Used.isChecked())
-                var Intent = Intent(this, view_movie_activity::class.java)
-                Intent.putExtra("Movie", movie as Serializable)
-                startActivity(Intent)
+                Movies.myMovieEntities.add(movie)
+                var intent = Intent(this, view_movie_activity::class.java)
+                intent.putExtra("id", Movies.number)
+                Movies.number = Movies.number + 1
+                startActivity(intent)
             }
         } else if (item?.itemId == R.id.miClear) {
             etMovieName.text.clear()
